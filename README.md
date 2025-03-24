@@ -29,6 +29,20 @@ Là on lui donne la version de python précise à installer.
 - Reliability : signale les erreurs critiques dans le code
 - Maintainability : signale les bouts de code difficile à modifier / comprendre...
 - Duplications : signale du code dupliqué, copié/collé
+
 # À quoi sert l'indicateur Quality Gate ?
 C'est un set de mesures qui indique si le projet est prêt à être déployé en production ou non
 en fonction du nombre de mesures acceptables.
+
+# Quelle est la différence entre les sections New code et Overall Code dans l'onglet Summary ?
+- New code montre l'analyse seulement sur les changements effectués depuis la dernière analyse
+- Overall code montre l'analyse du projet entier
+
+# Y a-t-il des Code Smells ? Si oui, combien et pour quelle(s) raisons(s) ?
+Oui il y en a 3, deux car des paramètres dans une fonction sont définis mais non utilisés
+et une car deux fonctions avec un nom différent font exactement la même chose
+
+# Y a-t-il des Security Hotspots ? Si oui, combien et pour quelle(s) raison(s) ?
+Oui il y en a une car le container dans le Dockerfile est exécuté avec le super user root
+ce qui peut poser des problèmes de sécurités
+
